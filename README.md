@@ -20,16 +20,19 @@
 你一定也認為會變慢是正常的，但結果是加速！加速！加速！
 
 
-```
-node test/efx_emptyEnum.js 1 1000000 0 7
-```
+下面兩為我隨意挑的測試
 
 ```
-node test/efx_emptyEnum.js 1 1000000 0 120
+node efx_emptyEnum.js 1 1000000 0 <物件陣列長度>
+node efx_emptyEnum.js 1 1000000 0 7
+node efx_emptyEnum.js 1 1000000 0 120
 ```
 
+
+觀察到的關鍵無作用程式碼
+
 ```
-  var n = 99;
+  var n = 99; // 改變其迴圈數 執行越多次越快
   while ( n-- ) /1/;
 ```
 
